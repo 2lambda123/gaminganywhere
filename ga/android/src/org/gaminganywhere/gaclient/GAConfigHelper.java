@@ -124,9 +124,9 @@ public class GAConfigHelper extends SQLiteOpenHelper {
 		do { try {
 			helper = new GAConfigHelper(context, null, null, 0);
 			db = helper.getWritableDatabase();
-			if(key.trim().equals(""))
+			if("".equals(key.trim()))
 				break;
-			if(config.get("host").trim().equals(""))
+			if("".equals(config.get("host").trim()))
 				break;
 			if(isUpdate == false) {
 				// check existing?
@@ -215,7 +215,7 @@ public class GAConfigHelper extends SQLiteOpenHelper {
 		Cursor c = null;
 		boolean ret = false;
 		// name is empty or the same?
-		if(newName.trim().equals(""))
+		if("".equals(newName.trim()))
 			return false;
 		if(newName.equals(key))
 			return false;
