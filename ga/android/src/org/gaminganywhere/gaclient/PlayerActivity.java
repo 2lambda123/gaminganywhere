@@ -116,7 +116,7 @@ public class PlayerActivity extends Activity implements SurfaceHolder.Callback, 
 			int watchdogTimeout = intent.getIntExtra("watchdogTimeout", 3);
 			int dropLateVideoFrame = intent.getIntExtra("dropLateVFrame", -1);
 			//
-			if(s == null || s.equals("")) {
+			if(s == null || "".equals(s)) {
 				showToast("Player: No profile provided");
 				return;
 			}

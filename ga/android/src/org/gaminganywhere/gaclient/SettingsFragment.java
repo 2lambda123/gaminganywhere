@@ -150,7 +150,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 		HashMap<String,String> config = new HashMap<String,String>();
 		String key = spref.getString("pref_title", "").trim();
 		//
-		if(key.equals("")) {
+		if("".equals(key)) {
 			showToast("Profile name cannot be null");
 			return false;
 		}
@@ -207,7 +207,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 			}
 		}
 		//
-		if(key.equals("pref_object")) {
+		if("pref_object".equals(key)) {
 			String s = spref.getString(key, "").trim();
 			if(s.charAt(0) != '/')
 				profileConfigEditTextPreference("pref_object", "/" + s, "/" + s,
